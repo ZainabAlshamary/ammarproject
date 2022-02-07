@@ -1,0 +1,80 @@
+
+  <div class="row">
+    <div class="mb-3">
+      <button type="submit" class="btn btn-secondary text-white me-2 " style="float: left;">اضافة كارت</button>
+      </div>
+    <div class="col-md-12 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h6 class="card-title">جميع الكروت</h6>
+          <form class="forms-sample">
+            <div class="row">
+              <div class="col-sm-10">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">اختر احد الاقسام</label>
+                <ng-select [items]="simpleItems"
+          [searchable]="false"
+          [(ngModel)]="selectedSimpleItem">
+        </ng-select>
+              </div>
+              </div>
+              <div class="col-sm-2">
+              <div class="mb-3">
+              <button type="submit" class="btn btn-info text-white me-2 mt-4">استيراد مجموعة كروت</button>
+              </div>
+              </div>
+
+            </div>
+            
+          
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+
+  <div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="text-center align-middle">#</th>
+                  <th class="text-center align-middle">رقم الكارت</th>
+                  <th class="text-center align-middle">رقم الكارت التسلسلي</th>
+                  <th class="text-center align-middle">الفئة</th>
+                  <th class="text-center align-middle">سعر الشراء</th>
+                  <th class="text-center align-middle">سعر بيع الوكيل</th>
+                  <th class="text-center align-middle">سعر بيع العميل</th>
+                  <th class="text-center align-middle">اجراءات</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <td class="text-center align-middle">5583827</td>
+                  <td class="text-cente align-middle">J211110I31001</td>
+                  <td class="text-center align-middle">كوكل بلي امريكي(25$)</td>
+                  <td class="text-center align-middle">24 د.ع</td>
+                  <td class="text-center align-middle">0 د.ع</td>
+                  <td class="text-center align-middle">26000 د.ع</td>
+                  <td class="text-center align-middle" >
+                    <button type="button" class="btn btn-warning text-white mx-1"><i class="feather icon-edit"></i></button>
+                    <button type="button" class="btn btn-danger mx-1"><i class="feather icon-delete"></i></button>
+                   </td>
+                 
+                </tr>
+              </tbody>
+            </table>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+
+  </div>
+ 
+
+<!-- Button trigger sm modal -->

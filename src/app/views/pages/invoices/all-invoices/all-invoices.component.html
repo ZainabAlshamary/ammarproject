@@ -1,0 +1,113 @@
+
+  <div class="row">
+    <div class="mb-3">
+      <button type="submit" class="btn btn-secondary text-white me-2 " style="float: left;">اضافة عضو</button>
+      </div>
+    <div class="col-md-12 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h6 class="card-title">قائمة الاعضاء</h6>
+          <form class="forms-sample">
+            <div class="row">
+              <div class="col-sm-10">
+              <div class="mb-3">
+                <input type="text" class="form-control" id="exampleInputUsername1" autocomplete="off" placeholder=" رقم الهاتف - اسم العضو ">
+              </div>
+              </div>
+              <div class="col-sm-2">
+              <div class="mb-3">
+              <button type="submit" class="btn btn-info text-white me-2">بحث</button>
+              </div>
+              </div>
+
+            </div>
+            
+          
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+
+  <div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="text-center align-middle">#</th>
+                  <th class="text-center align-middle">الاسم</th>
+                  <th class="text-center align-middle">رقم الهاتف</th>
+                  <th class="text-center align-middle">نوع الحساب</th>
+                  <th class="text-center align-middle">الرصيد</th>
+                  <th class="text-center align-middle">الخصم</th>
+                  <th class="text-center align-middle">اجراءات</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <td class="text-center align-middle">Hazem Sakban</td>
+                  <td class="text-cente align-middle">07805242058</td>
+                  <td class="text-center align-middle">وكيل</td>
+                  <td class="text-center align-middle">70 د.ع</td>
+                  <td class="text-center align-middle">0 د.ع</td>
+                  <td class="text-center align-middle" >
+                    <button type="button" (click)="openLgModal(lgModal)" class="btn btn-secondary mx-1"><i class="feather icon-plus"></i></button>
+                    <button type="button" class="btn btn-warning text-white mx-1"><i class="feather icon-edit"></i></button>
+                    <button type="button" class="btn btn-danger mx-1"><i class="feather icon-delete"></i></button>
+                   </td>
+                 
+                </tr>
+              </tbody>
+            </table>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+
+  </div>
+ 
+<ng-template #lgModal let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">إضافة عضو</h5>
+    <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <form class="forms-sample">
+              <div class="mb-3">
+                <label for="exampleInputUsername1" class="form-label">الاسم الكامل</label>
+                <input type="text" class="form-control" id="exampleInputUsername1" autocomplete="off" placeholder="Username">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">نوع الحركة</label>
+                <ng-select [items]="simpleItems"
+          [searchable]="false"
+          [(ngModel)]="selectedSimpleItem">
+        </ng-select>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">مقدار الحركة</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" autocomplete="off" placeholder="Password">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-info text-white" (click)="modal.close('by: save button')">حفظ</button>
+
+    <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">اغلاق</button>
+  </div>
+</ng-template>
+
+<!-- Button trigger sm modal -->

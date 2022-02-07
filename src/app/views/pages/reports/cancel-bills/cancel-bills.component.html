@@ -1,0 +1,117 @@
+<div class="row">
+    <div class="col-md-12">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-dot">
+              <li class="breadcrumb-item active" aria-current="page">الفواتير الملغاة</li>
+            </ol>
+          </nav>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-md-12 ">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="">من تأريخ</label>
+                            <div  class="input-group wd-200 me-2 mb-2 mt-2 mb-md-0 w-100">
+                                <button class="btn btn-outline-secondary btn-icon calendar" type="button" (click)="fromDate.toggle()">
+                                  <i data-feather="calendar" appFeatherIcon></i>
+                                </button>
+                                <input class="form-control bg-transparent" placeholder="yyyy-mm-dd"
+                                    name="dp"  ngbDatepicker #fromDate="ngbDatepicker">
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="">الى تأريخ</label>
+                            <div  class="input-group wd-200 me-2 mt-2 mb-2 mb-md-0 w-100">
+                                <button class="btn btn-outline-secondary btn-icon calendar" type="button" (click)="toDate.toggle()">
+                                  <i data-feather="calendar" appFeatherIcon></i>
+                                </button>
+                                <input class="form-control bg-transparent" placeholder="yyyy-mm-dd"
+                                    name="dp"  ngbDatepicker #toDate="ngbDatepicker">
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-flex align-self-end">
+                        <button class="btn btn-warning text-white">بحث</button>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-end align-self-end">
+                        <span>
+                            <button class="btn btn-warning text-white me-2">EXCEL</button>
+                        </span>
+                        <span>
+                            <button class="btn btn-warning text-white">CSV</button>
+                        </span>
+                    </div>
+                </div>
+                
+                <hr>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>الاسم</th>
+                                        <th>رقم الفاتورة</th>
+                                        <th>تأريخ الانشاء</th>
+                                        <th>المبلغ</th>
+                                        <th>رقم الهاتف</th>
+                                        <th>اسم الخدمة</th>
+                                        <th>NOTE</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <tr>
+                                        <td>1</td>
+                                        <td>حسن علي</td>
+                                        <td>4547855925</td>
+                                        <td>22/01/2022</td>
+                                        <td>100,000</td>
+                                        <td>07711242920</td>
+                                        <td>لا يوجد</td>
+                                        <td>لا يوجد</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>حسن علي</td>
+                                        <td>4547855925</td>
+                                        <td>22/01/2022</td>
+                                        <td>100,000</td>
+                                        <td>07711242920</td>
+                                        <td>لا يوجد</td>
+                                        <td>لا يوجد</td>
+                                    </tr>
+                                </tbody>
+                              </table>
+                              
+                        </div>
+                        <nav class="mt-3" aria-label="...">
+                            <ul class="pagination d-flex justify-content-center">
+                              <li class="page-item disabled">
+                                <a class="page-link">السابق</a>
+                              </li>
+                              <li class="page-item"><a class="page-link">1</a></li>
+                              <li class="page-item active" aria-current="page">
+                                <a class="page-link">2</a>
+                              </li>
+                              <li class="page-item"><a class="page-link">3</a></li>
+                              <li class="page-item">
+                                <a class="page-link">التالي</a>
+                              </li>
+                            </ul>
+                          </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

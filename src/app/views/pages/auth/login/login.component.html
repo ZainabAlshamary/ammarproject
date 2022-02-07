@@ -1,0 +1,87 @@
+<div class="row w-100 mx-0 auth-page">
+  <div class="col-md-8 col-xl-6 mx-auto">
+    <div class="card">
+      <div class="row">
+        <div class="col-md-4 pe-md-0">
+          <div
+            style="background-color: rgb(245 245 245) !important; height: 100%"
+            class="row"
+          >
+            <div class="col-md-12 text-center m-0 mt-5" style="max-height: 0px">
+              
+            </div>
+            <div class="col-md-12 text-center mt-0">
+              <img
+                src="../../../../../assets/images/flags/logo.png"
+                width="250"
+                alt=""
+              />
+            </div>
+            <div class="col-md-12 text-center">
+             
+              <p style="color: rgb(43 148 167) !important;
+              font-size: 22px;
+              font-weight: 500;">
+               انضم مع عملاء ايكارد
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8 ps-md-0">
+          <div class="auth-form-wrapper px-4 py-5">
+            <a routerLink="." class="nobleui-logo d-block mb-2"
+              >تسجيل الدخول الى الحساب
+            </a>
+            <h5 class="text-muted fw-normal mb-4">
+              الرجاء ملئ البيانات بصورة صحيحة.
+            </h5>
+            <form
+              [formGroup]="loginForm"
+              (ngSubmit)="login()"
+              class="forms-sample"
+            >
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >رقم الهاتف</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  placeholder="phoneNumber"
+                  formControlName="phoneNumber"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >الرمز السري</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  autocomplete="current-password"
+                  placeholder="Password"
+                  formControlName="password"
+                />
+              </div>
+
+              <div>
+                <!-- (click)="onLoggedin($event)" -->
+                <button
+                  type="submit"
+                  class="btn btn-secondary me-2 mb-2 mb-md-0 w-100"
+                >
+                  دخول
+                </button>
+              </div>
+              <a routerLink="/auth/register" class="d-block mt-3 text-muted"
+                >ليس لديك حساب؟ قريبا</a
+              >
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
